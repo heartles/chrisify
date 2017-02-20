@@ -9,7 +9,7 @@ import (
 	"os"
 	"path/filepath"
 
-	"github.com/zikes/chrisify/facefinder"
+	"github.com/heartles/chrisify/facefinder"
 
 	"github.com/disintegration/imaging"
 )
