@@ -59,7 +59,10 @@ func main() {
 		if newFace == nil {
 			panic("nil face")
 		}
-		chrisFace := imaging.Fit(newFace, rect.Dx(), rect.Dy(), imaging.Lanczos)
+		chrisFace := imaging.Fill(
+			imaging.Fit(newFace, rect.Dx(), rect.Dy(), imaging.Lanczos),
+			rect.Dx(), rect.Dy(), imaging.Center, imaging.Lanczos,
+		)
 
 		draw.Draw(
 			canvas,
